@@ -21,7 +21,8 @@ class PasswordResetsController < ApplicationController
 	end
 
   def edit
-  end
+     
+	end
 
   def update
     if password_blank?
