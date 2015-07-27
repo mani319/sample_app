@@ -11,21 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150725190023) do
+ActiveRecord::Schema.define(version: 20150727115859) do
 
-  create_table "users", force: true do |t|
+  create_table "Users", force: true do |t|
     t.string   "name"
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
     t.string   "remember_digest"
-    t.boolean  "admin",             default: false
+    t.boolean  "admin",                 default: false
     t.string   "activation_digest"
-    t.boolean  "activated",         default: false
+    t.boolean  "activated",             default: false
     t.datetime "activated_at"
+    t.string   "password_reset_digest"
+    t.datetime "password_reset_on"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "Users", ["email"], name: "index_users_on_email", unique: true
 
 end
